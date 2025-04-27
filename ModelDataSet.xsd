@@ -124,14 +124,14 @@ SELECT GameID, Game_Title, Price, ConsoleID FROM Game WHERE (GameID = @GameID)</
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ModelDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ModelDataSet" msprop:Generator_DataSetName="ModelDataSet">
+  <xs:element name="ModelDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ModelDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ModelDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Console" msprop:Generator_RowEvHandlerName="ConsoleRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsoleRowDeleted" msprop:Generator_RowDeletingName="ConsoleRowDeleting" msprop:Generator_RowEvArgName="ConsoleRowChangeEvent" msprop:Generator_TablePropName="Console" msprop:Generator_RowChangedName="ConsoleRowChanged" msprop:Generator_RowChangingName="ConsoleRowChanging" msprop:Generator_TableClassName="ConsoleDataTable" msprop:Generator_RowClassName="ConsoleRow" msprop:Generator_TableVarName="tableConsole" msprop:Generator_UserTableName="Console">
+        <xs:element name="Console" msprop:Generator_RowClassName="ConsoleRow" msprop:Generator_RowEvHandlerName="ConsoleRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsoleRowDeleted" msprop:Generator_RowDeletingName="ConsoleRowDeleting" msprop:Generator_RowEvArgName="ConsoleRowChangeEvent" msprop:Generator_TablePropName="Console" msprop:Generator_RowChangedName="ConsoleRowChanged" msprop:Generator_UserTableName="Console" msprop:Generator_RowChangingName="ConsoleRowChanging" msprop:Generator_TableClassName="ConsoleDataTable" msprop:Generator_TableVarName="tableConsole">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ConsoleID" msprop:Generator_ColumnPropNameInRow="ConsoleID" msprop:Generator_ColumnPropNameInTable="ConsoleIDColumn" msprop:Generator_ColumnVarNameInTable="columnConsoleID" msprop:Generator_UserColumnName="ConsoleID" type="xs:int" />
-              <xs:element name="Console_Name" msprop:Generator_ColumnPropNameInRow="Console_Name" msprop:Generator_ColumnPropNameInTable="Console_NameColumn" msprop:Generator_ColumnVarNameInTable="columnConsole_Name" msprop:Generator_UserColumnName="Console_Name" minOccurs="0">
+              <xs:element name="ConsoleID" msprop:Generator_UserColumnName="ConsoleID" msprop:Generator_ColumnPropNameInTable="ConsoleIDColumn" msprop:Generator_ColumnPropNameInRow="ConsoleID" msprop:Generator_ColumnVarNameInTable="columnConsoleID" type="xs:int" />
+              <xs:element name="Console_Name" msprop:Generator_UserColumnName="Console_Name" msprop:Generator_ColumnPropNameInTable="Console_NameColumn" msprop:Generator_ColumnPropNameInRow="Console_Name" msprop:Generator_ColumnVarNameInTable="columnConsole_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -141,19 +141,19 @@ SELECT GameID, Game_Title, Price, ConsoleID FROM Game WHERE (GameID = @GameID)</
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Game" msprop:Generator_RowEvHandlerName="GameRowChangeEventHandler" msprop:Generator_RowDeletedName="GameRowDeleted" msprop:Generator_RowDeletingName="GameRowDeleting" msprop:Generator_RowEvArgName="GameRowChangeEvent" msprop:Generator_TablePropName="Game" msprop:Generator_RowChangedName="GameRowChanged" msprop:Generator_RowChangingName="GameRowChanging" msprop:Generator_TableClassName="GameDataTable" msprop:Generator_RowClassName="GameRow" msprop:Generator_TableVarName="tableGame" msprop:Generator_UserTableName="Game">
+        <xs:element name="Game" msprop:Generator_RowClassName="GameRow" msprop:Generator_RowEvHandlerName="GameRowChangeEventHandler" msprop:Generator_RowDeletedName="GameRowDeleted" msprop:Generator_RowDeletingName="GameRowDeleting" msprop:Generator_RowEvArgName="GameRowChangeEvent" msprop:Generator_TablePropName="Game" msprop:Generator_RowChangedName="GameRowChanged" msprop:Generator_UserTableName="Game" msprop:Generator_RowChangingName="GameRowChanging" msprop:Generator_TableClassName="GameDataTable" msprop:Generator_TableVarName="tableGame">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="GameID" msprop:Generator_ColumnPropNameInRow="GameID" msprop:Generator_ColumnPropNameInTable="GameIDColumn" msprop:Generator_ColumnVarNameInTable="columnGameID" msprop:Generator_UserColumnName="GameID" type="xs:int" />
-              <xs:element name="Game_Title" msprop:Generator_ColumnPropNameInRow="Game_Title" msprop:Generator_ColumnPropNameInTable="Game_TitleColumn" msprop:Generator_ColumnVarNameInTable="columnGame_Title" msprop:Generator_UserColumnName="Game_Title" minOccurs="0">
+              <xs:element name="GameID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="GameID" msprop:Generator_ColumnPropNameInTable="GameIDColumn" msprop:Generator_ColumnPropNameInRow="GameID" msprop:Generator_ColumnVarNameInTable="columnGameID" type="xs:int" />
+              <xs:element name="Game_Title" msprop:Generator_UserColumnName="Game_Title" msprop:Generator_ColumnPropNameInTable="Game_TitleColumn" msprop:Generator_ColumnPropNameInRow="Game_Title" msprop:Generator_ColumnVarNameInTable="columnGame_Title" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
-              <xs:element name="ConsoleID" msprop:Generator_ColumnPropNameInRow="ConsoleID" msprop:Generator_ColumnPropNameInTable="ConsoleIDColumn" msprop:Generator_ColumnVarNameInTable="columnConsoleID" msprop:Generator_UserColumnName="ConsoleID" type="xs:int" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ConsoleID" msprop:Generator_UserColumnName="ConsoleID" msprop:Generator_ColumnPropNameInTable="ConsoleIDColumn" msprop:Generator_ColumnPropNameInRow="ConsoleID" msprop:Generator_ColumnVarNameInTable="columnConsoleID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -170,7 +170,7 @@ SELECT GameID, Game_Title, Price, ConsoleID FROM Game WHERE (GameID = @GameID)</
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Game_Console_Table" msdata:parent="Console" msdata:child="Game" msdata:parentkey="ConsoleID" msdata:childkey="ConsoleID" msprop:Generator_UserParentTable="Console" msprop:Generator_UserChildTable="Game" msprop:Generator_RelationVarName="relationFK_Game_Console_Table" msprop:Generator_ChildPropName="GetGameRows" msprop:Generator_ParentPropName="ConsoleRow" msprop:Generator_UserRelationName="FK_Game_Console_Table" />
+      <msdata:Relationship name="FK_Game_Console_Table" msdata:parent="Console" msdata:child="Game" msdata:parentkey="ConsoleID" msdata:childkey="ConsoleID" msprop:Generator_UserParentTable="Console" msprop:Generator_UserChildTable="Game" msprop:Generator_RelationVarName="relationFK_Game_Console_Table" msprop:Generator_ChildPropName="GetGameRows" msprop:Generator_UserRelationName="FK_Game_Console_Table" msprop:Generator_ParentPropName="ConsoleRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

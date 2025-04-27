@@ -704,10 +704,10 @@ namespace DatabaseII_FinalProject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GameRow AddGameRow(int GameID, string Game_Title, decimal Price, ConsoleRow parentConsoleRowByFK_Game_Console_Table) {
+            public GameRow AddGameRow(string Game_Title, decimal Price, ConsoleRow parentConsoleRowByFK_Game_Console_Table) {
                 GameRow rowGameRow = ((GameRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        GameID,
+                        null,
                         Game_Title,
                         Price,
                         null};
@@ -762,6 +762,9 @@ namespace DatabaseII_FinalProject {
                 base.Columns.Add(this.columnConsoleID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnGameID}, true));
+                this.columnGameID.AutoIncrement = true;
+                this.columnGameID.AutoIncrementSeed = -1;
+                this.columnGameID.AutoIncrementStep = -1;
                 this.columnGameID.AllowDBNull = false;
                 this.columnGameID.Unique = true;
                 this.columnGame_Title.MaxLength = 50;
